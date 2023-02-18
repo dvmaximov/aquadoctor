@@ -1,0 +1,152 @@
+{
+  "users": [
+      {
+        "id": "13766197-4bec-4005-bd31-c97763b6aca7",
+        "name": "dima",
+        "programs": [],
+        "current": true,
+        "image": null
+      }
+  ],
+  "programs": [
+    {
+      "id": "1",
+      "name": "program 1",
+      "rotateSpeed": 4,
+      "imageSpeed": "10",
+      "imageWidth": "75",
+      "imageHeight": "100",
+      "circles": [
+        {
+          "id": "1",
+          "size": "60",
+          "shift": "6%",
+          "color1": "#fcdc0a",
+          "color2": "#0a97fc",
+          "color3": "#0afccc",
+          "upTime": "3",
+          "constTime": "8",
+          "downTime": "5",
+          "speed": "4"
+        },
+        {
+          "id": "2",
+          "size": "50",
+          "shift": "8%",
+          "color1": "#fa07cd",
+          "color2": "#fab907",
+          "color3": "#fa0707",
+          "upTime": "6",
+          "constTime": "3",
+          "downTime": "6",
+          "speed": "8"
+        },
+        {
+          "id": "3",
+          "size": "5",
+          "shift": "200%",
+          "color1": "#0afa1e",
+          "color2": "#0a16fa",
+          "color3": "#0afa1e",
+          "upTime": "5",
+          "constTime": "10",
+          "downTime": "5",
+          "speed": "10"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "program 2",
+      "rotateSpeed": 4,
+      "imageSpeed": "10",
+      "imageWidth": "75",
+      "imageHeight": "100",
+      "circles": [
+        {
+          "id": "1",
+          "size": "60",
+          "shift": "6%",
+          "color1": "#fcdc0a",
+          "color2": "#0a97fc",
+          "color3": "#0afccc",
+          "upTime": "3",
+          "constTime": "8",
+          "downTime": "5",
+          "speed": "4"
+        },
+        {
+          "id": "2",
+          "size": "50",
+          "shift": "8%",
+          "color1": "#fa07cd",
+          "color2": "#fab907",
+          "color3": "#fa0707",
+          "upTime": "6",
+          "constTime": "3",
+          "downTime": "6",
+          "speed": "8"
+        },
+        {
+          "id": "3",
+          "size": "5",
+          "shift": "200%",
+          "color1": "#0afa1e",
+          "color2": "#0a16fa",
+          "color3": "#0afa1e",
+          "upTime": "5",
+          "constTime": "10",
+          "downTime": "5",
+          "speed": "10"
+        }
+      ]
+    },
+        {
+      "id": "3",
+      "name": "program 3",
+      "rotateSpeed": 4,
+      "imageSpeed": "10",
+      "imageWidth": "75",
+      "imageHeight": "100",
+      "circles": [
+        {
+          "id": "1",
+          "size": "60",
+          "shift": "6%",
+          "color1": "#fcdc0a",
+          "color2": "#0a97fc",
+          "color3": "#0afccc",
+          "upTime": "3",
+          "constTime": "8",
+          "downTime": "5",
+          "speed": "4"
+        },
+        {
+          "id": "2",
+          "size": "50",
+          "shift": "8%",
+          "color1": "#fa07cd",
+          "color2": "#fab907",
+          "color3": "#fa0707",
+          "upTime": "6",
+          "constTime": "3",
+          "downTime": "6",
+          "speed": "8"
+        },
+        {
+          "id": "3",
+          "size": "5",
+          "shift": "200%",
+          "color1": "#0afa1e",
+          "color2": "#0a16fa",
+          "color3": "#0afa1e",
+          "upTime": "5",
+          "constTime": "10",
+          "downTime": "5",
+          "speed": "10"
+        }
+      ]
+    }
+  ],
+  "settings": []
+}

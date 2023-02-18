@@ -1,0 +1,126 @@
+:root {
+  --primary: #25abd9;
+  --secondary: #777;
+  --bg-color: #070d19;
+  --bg-button: rgb(73 73 152 / 30%);
+  --icon-plus: #0f0;
+  --icon-minus: #f00;
+  --icon-stop: rgba(255, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  // padding: 0;
+  // margin: 0;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  color: var(--secondary);
+}
+
+#q-app {
+  min-height: 100vh;
+}
+
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  fill: var(--primary);
+  padding: 7px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+
+  &:active {
+    background-color: var(--primary);
+    fill: var(--secondary);
+  }
+  &--small {
+    width: 25px;
+    height: 25px;
+  }
+  &--plus {
+    fill: var(--icon-plus);
+  }
+  &--minus {
+    fill: var(--icon-minus);
+  }
+  &--stop {
+    fill: var(--icon-stop);
+    margin: 20px;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-button);
+  background-image: none;
+  border: 2px solid var(--primary);
+  border-radius: var(--el-input-border-radius, var(--el-border-radius-base));
+  font-size: 14px;
+  height: var(--el-component-size-large);
+  color: var(--secondary);
+  cursor: pointer;
+  margin: 20px 20px 20px 0px;
+  padding: 5px 10px;
+
+  &:active {
+    background-color: var(--primary);
+    fill: var(--secondary);
+  }
+
+  &--small {
+    margin: 0;
+    padding: 5px;
+    height: 25px;
+    font-size: 12px;
+  }
+}
+
+.program-list {
+  display: flex;
+  flex-direction: column;
+}
+.program-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  & > em {
+    background-color: var(--bg-button);
+    width: 70%;
+    padding: 5px;
+  }
+}
+
+.el-scrollbar__bar.is-vertical > div {
+  background-color: red;
+}
+
+.el-select .el-input__wrapper,
+.el-input .el-input__wrapper {
+  background-color: rgb(73 73 152 / 30%);
+  background-image: none;
+  border: 2px solid var(--primary);
+  box-shadow: none;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: transform 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  transform: translateX(2000px);
+  // opacity: 0;
+}
