@@ -1,6 +1,9 @@
 <template>
   <el-header class="header" v-show="showHeader">
-    <router-link to="/">Header</router-link>
+    <router-link to="/" class="header__link">
+      <em class="header__aqua">aqua</em>
+      <em class="header__doctor">DOCTOR</em>
+    </router-link>
     <div class="icon" @click="goBack" v-show="showBack">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
         <path
@@ -42,11 +45,30 @@ export default defineComponent({
   align-items: center;
   border: 1px solid var(--primary);
   margin: 1px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.user {
+.user,
+.header__doctor {
   text-transform: uppercase;
   color: rgba(200, 200, 200, 0.5);
   font-weight: bold;
+  font-size: 22px;
+  overflow: hidden;
+}
+
+.header__link {
+  text-decoration: none;
+}
+
+.header__aqua {
+  font-size: 18px;
+  color: var(--primary);
+}
+
+.header__doctor {
+  font-style: normal;
+  margin-left: 2px;
 }
 </style>

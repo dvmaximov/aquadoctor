@@ -3,7 +3,7 @@
     <div class="btn btn--add" @click="onAddProgram" v-if="showAddProgram">
       Add Program
     </div>
-    <el-scrollbar height="100px" class="program-list">
+    <el-scrollbar height="250px" class="program-list">
       <div
         class="program-item"
         v-for="program in currentUser?.programs"

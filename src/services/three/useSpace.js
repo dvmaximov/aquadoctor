@@ -36,10 +36,14 @@ class Space {
       // [[1.0, 0.2, 0.5], this.star, 20],
       // [[0.95, 0.1, 0.5], this.star, 15],
       // [[0.9, 0.05, 0.5], this.star, 10],
-      [0x322f2f, this.star, 8],
-      [0x322f2f, this.star, 7],
-      [0x322f2f, this.star, 6],
-      [0x322f2f, this.star, 5],
+      // [0x322f2f, this.star, 8],
+      // [0x322f2f, this.star, 7],
+      // [0x322f2f, this.star, 6],
+      // [0x322f2f, this.star, 5],
+      [0x322f2f, this.star, 30],
+      [0x322f2f, this.star, 25],
+      [0x322f2f, this.star, 20],
+      [0x322f2f, this.star, 15],
     ];
 
     for (let i = 0; i < parameters.length; i++) {

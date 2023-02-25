@@ -96,7 +96,7 @@ export default defineComponent({
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 20px 20px;
 }
 .user-select {
   width: 70%;
