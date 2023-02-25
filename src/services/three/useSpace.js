@@ -40,10 +40,10 @@ class Space {
       // [0x322f2f, this.star, 7],
       // [0x322f2f, this.star, 6],
       // [0x322f2f, this.star, 5],
-      [0x322f2f, this.star, 30],
       [0x322f2f, this.star, 25],
       [0x322f2f, this.star, 20],
       [0x322f2f, this.star, 15],
+      [0x322f2f, this.star, 10],
     ];
 
     for (let i = 0; i < parameters.length; i++) {
