@@ -52,9 +52,9 @@ export default defineComponent({
     const usersStore = useUsersStore();
     const { currentUser } = storeToRefs(usersStore);
     const router = useRouter();
-    let listHeight = ref("200px");
+    let listHeight = ref("180px");
 
-    if (props.fullHeight) listHeight.value = "300px";
+    if (props.fullHeight) listHeight.value = "400px";
 
     function onAddProgram() {
       if (!currentUser) return;

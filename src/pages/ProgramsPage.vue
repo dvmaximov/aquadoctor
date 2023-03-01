@@ -19,8 +19,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .programs-box {
-  // display: flex;
-  // align-items: flex-start;
-  // justify-content: center;
+  padding: 20px;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <el-scrollbar height="150px" class="select-program-list">
+  <el-scrollbar height="400px" class="select-program-list">
     <div v-for="program in programs" :key="program.id">
       <div class="program-item">
         <em>{{ program.name }}</em>
@@ -72,4 +72,19 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.select-program-list {
+  border: 2px solid var(--primary);
+}
+.program-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+
+  em {
+    width: 70%;
+    height: 50px;
+    font-size: 18px;
+  }
+}
+</style>
