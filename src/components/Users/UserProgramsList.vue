@@ -3,7 +3,7 @@
     <div class="btn btn--add" @click="onAddProgram" v-if="showAddProgram">
       Add Program
     </div>
-    <el-scrollbar height="250px" class="program-list">
+    <el-scrollbar height="200px" class="program-list">
       <div
         class="program-item"
         v-for="program in currentUser?.programs"
@@ -82,18 +82,27 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .programs-box {
-  margin: 20px;
+  margin: 10px 20px 20px 20px;
 }
+
+.program-list {
+  border: 2px solid var(--primary);
+}
+
 .program-item {
   display: flex;
   align-items: center;
+  padding: 5px;
 
   em {
     width: 70%;
+    height: 50px;
+    font-size: 18px;
   }
 }
 .btn--item {
   margin-right: 20px;
+  font-size: 18px;
 }
 .btn--add {
   width: 100%;

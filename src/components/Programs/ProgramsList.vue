@@ -1,5 +1,5 @@
 <template>
-  <el-scrollbar height="150px" class="program-list">
+  <el-scrollbar height="150px" class="select-program-list">
     <div v-for="program in programs" :key="program.id">
       <div class="program-item">
         <em>{{ program.name }}</em>

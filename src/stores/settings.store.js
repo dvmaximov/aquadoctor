@@ -8,5 +8,8 @@ export const useSettingsStore = defineStore("settings", {
     setShowHeader(value) {
       if (this.showHeader !== value) this.showHeader = value;
     },
+    shutdown() {
+      window.CMD.runCmd("shutdown now");
+    },
   },
 });

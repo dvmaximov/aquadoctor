@@ -33,8 +33,10 @@ import * as path from "path";
 import { readFileSync } from "fs";
 
 import { getTable, loadDb, setTable, dir } from "./api/db-api";
+import { CMD } from "./api/cmd.api";
 
 let db = loadDb();
+const cmd = new CMD();
 
 contextBridge.exposeInMainWorld("DB", {
   getAll: (tableName) => {
@@ -60,5 +62,11 @@ contextBridge.exposeInMainWorld("DB", {
     );
     arrayBuffer = [arrayBuffer];
     return new File(arrayBuffer, source);
+  },
+});
+
+contextBridge.exposeInMainWorld("CMD", {
+  runCmd: (command) => {
+    return cmd.run(command);
   },
 });

@@ -15,11 +15,10 @@
 }
 
 body {
-  // padding: 0;
-  // margin: 0;
   overflow: hidden;
   background-color: var(--bg-color);
   color: var(--secondary);
+  // cursor: none;
 }
 
 #q-app {
@@ -30,8 +29,8 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
   fill: var(--primary);
   padding: 7px;
   border: 2px solid var(--primary);
@@ -42,14 +41,15 @@ body {
     fill: var(--secondary);
   }
   &--small {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
   }
   &--plus {
     fill: var(--icon-plus);
   }
   &--minus {
     fill: var(--icon-minus);
+    font-weight: bold;
   }
   &--stop {
     fill: var(--icon-stop);
@@ -65,8 +65,9 @@ body {
   background-image: none;
   border: 2px solid var(--primary);
   border-radius: var(--el-input-border-radius, var(--el-border-radius-base));
-  font-size: 14px;
-  height: var(--el-component-size-large);
+  font-size: 22px;
+  // height: var(--el-component-size-large);
+  height: 60px;
   color: var(--secondary);
   cursor: pointer;
   margin: 20px 20px 20px 0px;
@@ -79,8 +80,8 @@ body {
 
   &--small {
     margin: 0;
-    padding: 5px;
-    height: 25px;
+    padding: 15px;
+    height: 40px;
     font-size: 12px;
   }
 }
@@ -112,6 +113,8 @@ body {
   background-image: none;
   border: 2px solid var(--primary);
   box-shadow: none;
+  height: 60px;
+  font-size: 22px;
 }
 
 .v-enter-active,

@@ -1,6 +1,6 @@
 <template>
   <div class="default-layout">
-    <Background3D />
+    <!-- <Background3D /> -->
     <el-container class="container">
       <MainHeader />
       <el-main class="main">
@@ -24,14 +24,15 @@
 </template>
 
 <script>
-import Background3D from "../components/Background3D.vue";
+// import Background3D from "../components/Background3D.vue";
 import MainHeader from "../components/MainHeader.vue";
 import { defineComponent } from "vue";
 import { useUsersStore } from "src/stores/users.store";
 
 export default defineComponent({
   name: "DefaultLayout",
-  components: { Background3D, MainHeader },
+  // components: { Background3D, MainHeader },
+  components: { MainHeader },
   setup() {
     const usersStore = useUsersStore();
     usersStore.requestUsers();
