@@ -3,7 +3,7 @@
     <div class="btn btn--add" @click="onAddProgram" v-if="showAddProgram">
       Add Program
     </div>
-    <el-scrollbar height="200px" class="program-list">
+    <el-scrollbar :height="listHeight" class="program-list">
       <div
         class="program-item"
         v-for="program in currentUser?.programs"
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import { useRouter } from "vue-router";
 import { storeToRefs } from "pinia";
 import { useUsersStore } from "src/stores/users.store";
@@ -43,11 +43,18 @@ export default defineComponent({
       type: Boolean,
       default: true,
     },
+    fullHeight: {
+      type: Boolean,
+      default: false,
+    },
   },
-  setup() {
+  setup(props) {
     const usersStore = useUsersStore();
     const { currentUser } = storeToRefs(usersStore);
     const router = useRouter();
+    let listHeight = ref("200px");
+
+    if (props.fullHeight) listHeight.value = "300px";
 
     function onAddProgram() {
       if (!currentUser) return;
@@ -75,6 +82,7 @@ export default defineComponent({
       currentUser,
       deleteUserProgram,
       choiced,
+      listHeight,
     };
   },
 });
@@ -82,7 +90,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .programs-box {
-  margin: 10px 20px 20px 20px;
+  margin: 0px 20px 20px 20px;
 }
 
 .program-list {

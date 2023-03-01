@@ -1,6 +1,6 @@
 <template>
   <div class="programs-list">
-    <UserProgramsList :showAddProgram="false" />
+    <UserProgramsList :showAddProgram="false" fullHeight />
   </div>
 </template>
 

@@ -66,11 +66,10 @@ body {
   border: 2px solid var(--primary);
   border-radius: var(--el-input-border-radius, var(--el-border-radius-base));
   font-size: 22px;
-  // height: var(--el-component-size-large);
   height: 60px;
   color: var(--secondary);
   cursor: pointer;
-  margin: 20px 20px 20px 0px;
+  margin: 5px 20px 10px 0px;
   padding: 5px 10px;
 
   &:active {
