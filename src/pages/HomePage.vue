@@ -67,12 +67,12 @@
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, onMounted } from "vue";
 import { storeToRefs } from "pinia";
 import { useUsersStore } from "src/stores/users.store";
 import { useProgramsStore } from "src/stores/programs.store";
 import AddUser from "src/components/Users/AddUser.vue";
-import { addBackPath } from "src/services/back.service";
+import { addBackPath, clearBack } from "src/services/back.service";
 
 const rootLinks = [
   { link: "/users", icon: null, title: "Users" },
@@ -94,6 +94,10 @@ export default defineComponent({
     function addBack() {
       addBackPath("/");
     }
+
+    onMounted(() => {
+      clearBack();
+    });
 
     return { users, links, currentUser, addBack };
   },

@@ -1,6 +1,6 @@
 import { useRouter } from "vue-router";
 
-const backPaths = [];
+let backPaths = [];
 
 export const useBackPath = () => {
   const router = useRouter();
@@ -17,4 +17,8 @@ export const addBackPath = (backPath) => {
 
 export const isBackEmpty = () => {
   return backPaths.length === 0;
+};
+
+export const clearBack = () => {
+  backPaths = [];
 };

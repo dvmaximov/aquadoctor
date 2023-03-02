@@ -63,7 +63,7 @@ export default defineComponent({
       this.visible = false;
     }
     function clickKey(key) {
-      this.name = key;
+      name.value = key;
     }
 
     return {
@@ -86,9 +86,11 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 
   .name {
     width: 70%;
+    margin-right: 25px;
   }
 }
 
@@ -100,7 +102,7 @@ export default defineComponent({
   margin-bottom: 10px;
 
   .keyboard {
-    width: 70%;
+    width: 90%;
     justify-content: center;
   }
 }
