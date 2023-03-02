@@ -54,7 +54,7 @@ export default defineComponent({
     const router = useRouter();
     let listHeight = ref("180px");
 
-    if (props.fullHeight) listHeight.value = "400px";
+    if (props.fullHeight) listHeight.value = "350px";
 
     function onAddProgram() {
       if (!currentUser) return;
