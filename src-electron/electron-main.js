@@ -23,7 +23,7 @@ function createWindow() {
     icon: path.resolve(__dirname, "icons/icon.png"), // tray icon
     width: 1000,
     height: 600,
-    // fullscreen: true,
+    fullscreen: true,
     useContentSize: true,
     webPreferences: {
       contextIsolation: true,
@@ -33,7 +33,7 @@ function createWindow() {
     },
   });
 
-  // mainWindow.removeMenu();
+  mainWindow.removeMenu();
   mainWindow.loadURL(process.env.APP_URL);
 
   if (process.env.DEBUGGING) {
