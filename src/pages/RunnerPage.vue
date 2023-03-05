@@ -15,7 +15,7 @@ export default defineComponent({
   async setup() {
     const route = useRoute();
     const programsStore = useProgramsStore();
-    programsStore.requestPrograms();
+    // programsStore.requestPrograms();
     const program = programsStore.programByID(route.query["programID"]);
     return {
       program,

@@ -34,7 +34,7 @@ import { defineComponent, ref } from "vue";
 import { useRouter } from "vue-router";
 import { storeToRefs } from "pinia";
 import { useUsersStore } from "src/stores/users.store";
-import { addBackPath } from "src/services/back.service";
+import { useSettingsStore } from "src/stores/settings.store";
 
 export default defineComponent({
   name: "UserProgramsList",
@@ -49,6 +49,8 @@ export default defineComponent({
     },
   },
   setup(props) {
+    const settingsStore = useSettingsStore();
+    const addBackPath = settingsStore.addBackPath;
     const usersStore = useUsersStore();
     const { currentUser } = storeToRefs(usersStore);
     const router = useRouter();

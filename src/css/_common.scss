@@ -1,0 +1,26 @@
+:root {
+  --primary: #25abd9;
+  --secondary: #777;
+  --bg-color: #070d19;
+  --bg-button: rgb(73 73 152 / 30%);
+  --icon-plus: #0f0;
+  --icon-minus: #f00;
+  --icon-stop: rgba(255, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background-color: var(--bg-color);
+  color: var(--secondary);
+  // cursor: none;
+}
+
+#q-app {
+  min-height: 100vh;
+}

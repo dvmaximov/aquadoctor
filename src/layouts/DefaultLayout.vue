@@ -6,12 +6,12 @@
       <el-main class="main">
         <Suspense>
           <template #default>
-            <!-- <router-view v-slot="{ Component }">
-              <Transition>
+            <router-view v-slot="{ Component }">
+              <Transition mode="out-in">
                 <component :is="Component" />
               </Transition>
-            </router-view> -->
-            <router-view></router-view>
+            </router-view>
+            <!-- <router-view></router-view> -->
           </template>
           <template #fallback>
             <div>Loading...</div>
@@ -24,18 +24,22 @@
 </template>
 
 <script>
-// import Background3D from "../components/Background3D.vue";
 import MainHeader from "../components/MainHeader.vue";
-import { defineComponent } from "vue";
+import { defineComponent, onMounted } from "vue";
 import { useUsersStore } from "src/stores/users.store";
+import { useProgramsStore } from "src/stores/programs.store";
 
 export default defineComponent({
   name: "DefaultLayout",
-  // components: { Background3D, MainHeader },
   components: { MainHeader },
   setup() {
     const usersStore = useUsersStore();
-    usersStore.requestUsers();
+    const programsStore = useProgramsStore();
+
+    onMounted(() => {
+      usersStore.requestUsers();
+      programsStore.requestPrograms();
+    });
   },
 });
 </script>

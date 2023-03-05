@@ -43,7 +43,7 @@ import { defineComponent, ref, watch } from "vue";
 import { storeToRefs } from "pinia";
 
 import { useUsersStore } from "src/stores/users.store";
-import { addBackPath } from "src/services/back.service";
+import { useSettingsStore } from "src/stores/settings.store";
 
 export default defineComponent({
   name: "SelectUser",
@@ -54,8 +54,10 @@ export default defineComponent({
     },
   },
   emits: ["changeUserId", "deleteUser"],
-  setup(props, { emit }) {
-    // let userId = ref(props.currentUserId);
+  setup(_, { emit }) {
+    const settingsStore = useSettingsStore();
+    const addBackPath = settingsStore.addBackPath;
+
     const userStore = useUsersStore();
     const { currentUser } = storeToRefs(userStore);
     let userID = ref(currentUser.value.id);
@@ -83,11 +85,6 @@ export default defineComponent({
       addBack,
     };
   },
-  // watch: {
-  //   currentUser() {
-  //     console.log('current');
-  //   },
-  // },
 });
 </script>
 

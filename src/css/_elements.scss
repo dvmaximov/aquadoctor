@@ -1,0 +1,13 @@
+.el-scrollbar__bar.is-vertical > div {
+  background-color: red;
+}
+
+.el-select .el-input__wrapper,
+.el-input .el-input__wrapper {
+  background-color: rgb(73 73 152 / 30%);
+  background-image: none;
+  border: 2px solid var(--primary);
+  box-shadow: none;
+  height: 60px;
+  font-size: 22px;
+}

@@ -1,0 +1,16 @@
+.program-list {
+  display: flex;
+  flex-direction: column;
+}
+.program-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  & > em {
+    background-color: var(--bg-button);
+    width: 70%;
+    padding: 5px;
+  }
+}

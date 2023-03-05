@@ -70,9 +70,8 @@
 import { defineComponent, ref, onMounted } from "vue";
 import { storeToRefs } from "pinia";
 import { useUsersStore } from "src/stores/users.store";
-import { useProgramsStore } from "src/stores/programs.store";
 import AddUser from "src/components/Users/AddUser.vue";
-import { addBackPath, clearBack } from "src/services/back.service";
+import { useSettingsStore } from "src/stores/settings.store";
 
 const rootLinks = [
   { link: "/users", icon: null, title: "Users" },
@@ -85,9 +84,10 @@ export default defineComponent({
   components: { AddUser },
   setup() {
     const usersStore = useUsersStore();
-    usersStore.requestUsers();
-    const programsStore = useProgramsStore();
-    programsStore.requestPrograms();
+
+    const settingsStore = useSettingsStore();
+    const addBackPath = settingsStore.addBackPath;
+    const clearBack = settingsStore.clearBack;
     const { users, currentUser } = storeToRefs(usersStore);
     const links = ref(rootLinks);
 

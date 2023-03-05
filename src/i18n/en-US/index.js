@@ -4,5 +4,5 @@
 export default {
   failed: "Action failed",
   success: "Action was successful",
-  newUserName: "Enter new name",
+  newUserName: "Enter new user",
 };

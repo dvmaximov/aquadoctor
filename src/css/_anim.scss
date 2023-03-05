@@ -1,0 +1,11 @@
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.v-enter-from,
+.v-leave-to {
+  // transform: translateX(1000px);
+  opacity: 0;
+}

@@ -21,7 +21,6 @@ import { defineComponent, onMounted, onUnmounted, ref } from "vue";
 import { useRouter } from "vue-router";
 import ColorCircleItem from "src/components/ColorCircles/ColorCircleItem";
 import { useSettingsStore } from "src/stores/settings.store";
-import { useBackPath } from "src/services/back.service";
 
 export default defineComponent({
   name: "ColorCircles",
@@ -29,6 +28,7 @@ export default defineComponent({
   components: { ColorCircleItem },
   setup(props) {
     const settingsStore = useSettingsStore();
+    const addBackPath = settingsStore.addBackPath;
     const router = useRouter();
     const circles = ref(null);
     const audio = ref(null);
@@ -36,7 +36,7 @@ export default defineComponent({
       props.program.id,
       props.program.track
     );
-    const goBack = useBackPath();
+    const goBack = settingsStore.useBackPath();
 
     const activateCircles = () => {
       audio.value.src = URL.createObjectURL(trackFile);
