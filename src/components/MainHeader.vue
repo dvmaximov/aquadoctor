@@ -80,7 +80,8 @@ export default defineComponent({
 
 .icon__back,
 .icon--shutdown {
-  width: 11%;
+  width: 60px;
+  height: 60px;
 }
 
 .header__aqua {

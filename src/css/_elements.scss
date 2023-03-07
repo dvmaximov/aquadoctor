@@ -11,3 +11,8 @@
   height: 60px;
   font-size: 22px;
 }
+
+.el-select .el-input__wrapper,
+.el-input__inner {
+  cursor: none;
+}
